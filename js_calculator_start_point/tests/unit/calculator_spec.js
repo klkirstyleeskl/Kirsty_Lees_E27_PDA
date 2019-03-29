@@ -35,4 +35,11 @@ describe('calculator', function () {
     assert.equal(3, calculator.runningTotal)
   })
 
+  it('it should return NaN in certain functions', function(){
+    calculator.previousTotal = 21
+    calculator.divide(0)
+    assert.equal('NaN', calculator.runningTotal)
+  })
+
+
 });
